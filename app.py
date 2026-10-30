@@ -76,9 +76,9 @@ with st.sidebar:
     st.markdown("---")
     st.info("💡 **Tip:** Asegúrate de dar permisos de micrófono en tu navegador al hacer clic en el botón de inicio.")
 
-# Título y presentación
+# Título y presentación (Modificado para quitar "mediante MQTT")
 st.title("🎙️ Interfaces Multimodales")
-st.subheader("Control por Voz mediante MQTT")
+st.subheader("Control por Voz")
 
 # Carga de imagen segura (evita que se rompa si el archivo no existe en GitHub)
 try:
@@ -148,6 +148,8 @@ if result:
             st.success("✅ ¡Comando de voz publicado exitosamente en el tópico `voice_ctrl`!")
         except Exception as e:
             st.error(f"❌ Error al conectar o publicar en MQTT: {e}")
+
+# Crear directorio temporal
 
 # Crear directorio temporal de forma segura
 try:
